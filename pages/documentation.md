@@ -4,23 +4,7 @@ title: "Theme Documentation"
 subheadline: "How to use Feeling Responsive"
 teaser: "The documentation is a work in progress..."
 permalink: "/documentation/"
-header:
-   image_fullwidth: "header_roadmap_2.jpg"
 ---
-<div class="row">
-<div class="medium-4 medium-push-8 columns" markdown="1">
-<div class="panel radius" markdown="1">
-**Table of Contents**
-{: #toc }
-*  TOC
-{:toc}
-</div>
-</div><!-- /.medium-4.columns -->
-
-
-
-<div class="medium-8 medium-pull-4 columns" markdown="1">
-{% include _improve_content.html %}
 
 ## Edit Navigation   {#edit-navigation}
 
@@ -252,79 +236,3 @@ If your content is on Jekyll you can use this include to automatically generate 
 ~~~
 {% raw %}{% include _improve_content.html %}{% endraw %}
 ~~~
-
-
-### list-collection
-
-This include lets you loop through a collection to list all entries in that collection. If you set »published: false« in front matter of a collection page the page gots filtered out via unless. The following example loops through a collection called *wordpress*.
-
-~~~
-{% raw %}{% include list-collection collection='wordpress' %}{% endraw %}
-~~~
-
-
-### alert – Embed an alert in your content
-
-This include lets you easily display an alert. To use the include no `.html` ending is necessary. You can use five different kinds of alerts: `warning`, `info`, `success`, `alert` and `text`. 
-
-~~~
-{% raw %}{% include alert warning='This is a warning.' %}
-{% include alert info='An info box.' %}
-{% include alert success='Yeah, you made it!' %}
-{% include alert alert='Danger!' %}
-{% include alert terminal='jekyll -serve' %}
-{% include alert text='Just a note!' %}{% endraw %}
-~~~
-
-{% include alert warning='This is a warning.' %}
-{% include alert info='An info box.' %}
-{% include alert success='Yeah, you made it!' %}
-{% include alert alert='Danger!' %}
-{% include alert terminal='jekyll -serve' %}
-{% include alert text='Just a note!' %}
-
-You can even use `<html>`-tags inside the alert. Beware: Use " and ' properly.
-
-~~~
-{% raw %}{% include alert info='<em>Feeling Responsive</em> is listed on <a href="http://jekyllthemes.org/">http://jekyllthemes.org</a>' %}{% endraw %}
-~~~
-
-{% include alert info='<em>Feeling Responsive</em> is listed on <a href="http://jekyllthemes.org/">http://jekyllthemes.org</a>' %}
-
-<small markdown="1">[Up to table of contents](#toc)</small>
-{: .text-right }
-
-
-## Javascript/Foundation modules
-
-*Feeling Responsive* uses the foundation framework and some of its javascript components. I reduced the modules, to decrease page load and make the theme faster.
-
-I only added one other javascript-module: [`backstretch`][3] by Scott Robbin. These modules are currently used by the theme and included in `javascript.min.js`. There is also a non-minified version, if you want to take a closer look: `javascript.js`.
-
-~~~
-/foundation/bower_components/foundation/js/vendor/jquery.js'
-/foundation/bower_components/foundation/js/vendor/fastclick.js'
-/foundation/bower_components/foundation/js/foundation.accordion.js'
-/foundation/bower_components/foundation/js/foundation.clearing.js'
-/foundation/bower_components/foundation/js/foundation.dropdown.js'
-/foundation/bower_components/foundation/js/foundation.equalizer.js'
-/foundation/bower_components/foundation/js/foundation.magellan.js'
-/foundation/bower_components/foundation/js/foundation.topbar.js'
-/foundation/js/jquery.backstretch.js'
-~~~
-
-{% include _improve_content.html %}
-
-</div><!-- /.medium-8.columns -->
-</div><!-- /.row -->
-
- [1]: http://kramdown.gettalong.org/converter/html.html#toc
- [2]: {{ site.url }}/blog/
- [3]: http://srobbin.com/jquery-plugins/backstretch/
- [4]: #
- [5]: #
- [6]: #
- [7]: #
- [8]: #
- [9]: #
- [10]: #
